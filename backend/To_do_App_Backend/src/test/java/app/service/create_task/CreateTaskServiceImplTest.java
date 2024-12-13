@@ -1,5 +1,6 @@
 package app.service.create_task;
 
+import app.dtos.request.CreateTaskRequest;
 import app.dtos.request.UserLoginRequest;
 import app.dtos.request.UserRegisterDto;
 import app.repository.TaskRepository;
@@ -49,5 +50,12 @@ class CreateTaskServiceImplTest {
         userLoginRequest.setPassword("Password");
         assertEquals(userLoginRequest.getUsername()+ " logged in successfully", userLoginService.login(userLoginRequest));
 
+        CreateTaskRequest createTaskRequest = new CreateTaskRequest();
+        createTaskRequest.setCompleted(false);
+        createTaskRequest.setTitle("title");
+        createTaskRequest.setDescription("description");
+        createTaskRequest.setUser_id(userLoginRequest.getUsername());
+        createTaskService.addTask(createTaskRequest);
+        assertEquals(1, taskRepository.count());
     }
 }

@@ -11,7 +11,7 @@ import java.util.Date;
 @Document
 public class Task {
     @DBRef
-    private User userId;
+    private String userId;
     @Id
     private String taskId;
     private String title;

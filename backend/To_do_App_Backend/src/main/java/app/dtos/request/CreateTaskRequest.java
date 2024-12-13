@@ -11,5 +11,5 @@ public class CreateTaskRequest {
     private String description;
     private Boolean completed;
     private Date dueDate;
-    private User user_id;
+    private String user_id;
 }
