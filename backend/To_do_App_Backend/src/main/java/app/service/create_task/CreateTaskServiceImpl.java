@@ -19,7 +19,6 @@ public class CreateTaskServiceImpl implements CreateTaskService {
         if(createTaskRequest.getDescription().isBlank()) throw new IllegalArgumentException("Description cannot be blank");
         if(createTaskRequest.getUser_id().isBlank()) throw new IllegalArgumentException("User_id cannot be blank");
 
-
         Task task = new Task();
         task.setTitle(createTaskRequest.getTitle());
         task.setDescription(createTaskRequest.getDescription());
@@ -28,6 +27,6 @@ public class CreateTaskServiceImpl implements CreateTaskService {
         task.setCompleted(false);
         task.setUserId(createTaskRequest.getUser_id());
         taskRepository.save(task);
-        return "Task created successfully/n "+task.getTaskId();
+        return task.getTaskId();
     }
 }

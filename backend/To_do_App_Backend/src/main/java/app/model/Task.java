@@ -10,7 +10,6 @@ import java.util.Date;
 @Data
 @Document
 public class Task {
-    @DBRef
     private String userId;
     @Id
     private String taskId;
