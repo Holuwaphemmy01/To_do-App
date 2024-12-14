@@ -2,6 +2,7 @@ package app.service.view_all_task;
 
 import app.dtos.request.CreateTaskRequest;
 import app.dtos.request.UserRegisterDto;
+import app.model.Task;
 import app.repository.TaskRepository;
 import app.repository.UserRepository;
 import app.service.create_task.CreateTaskServiceImpl;
@@ -36,6 +37,7 @@ class ViewAllTasksServiceImplTest {
     @BeforeEach
     void setUp() {
         taskRepository.deleteAll();
+        userRepository.deleteAll();
     }
 
     @Test
@@ -56,12 +58,12 @@ class ViewAllTasksServiceImplTest {
 
         CreateTaskRequest createTaskRequest1 = new CreateTaskRequest();
         createTaskRequest1.setCompleted(false);
-        createTaskRequest1.setTitle("title");
+        createTaskRequest1.setTitle("title123");
         createTaskRequest1.setDescription("description");
-        createTaskRequest1.setUser_id("user151515");
+        createTaskRequest1.setUser_id("user152515");
         createTaskService.addTask(createTaskRequest1);
 
-        List result = List.of(viewAllTasksService.getAllTasks("femi"));
-        assertEquals(2, result.size());
+        List<Task> result = viewAllTasksService.getAllTasks("user151515");
+        assertEquals(1, result.size());
     }
 }

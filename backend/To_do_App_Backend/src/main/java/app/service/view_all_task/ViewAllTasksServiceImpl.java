@@ -20,8 +20,10 @@ public class ViewAllTasksServiceImpl implements ViewAllTasksService {
 
     @Override
     public List<Task> getAllTasks(String username) {
-        if(!userRepository.existsByUsername(username)) throw new RuntimeException("User not found");
-        else return List.of(taskRepository.findAllByUserId(username));
+        List<Task> result = null;
+        if (!userRepository.existsById(username)) throw new RuntimeException("User not found");
+            result = taskRepository.findAllByUserId(username);
+        return result;
 
     }
 

@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 public class HashPassword {
 
     public String hash(String password) {
-        return BCrypt.hashpw(password, BCrypt.gensalt(20));
+        return BCrypt.hashpw(password, BCrypt.gensalt(4));
     }
 
     public boolean checkPassword(String password, String hashedPassword) {
