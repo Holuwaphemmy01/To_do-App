@@ -32,7 +32,6 @@ public class UserRegisterServiceImpl implements UserRegisterService {
         user.setLastName(userRegisterDto.getLastName());
         user.setUsername(userRegisterDto.getUserName());
         user.setPassword(hashPassword.hash(userRegisterDto.getPassword()));
-        System.out.println(user.getPassword());
         userRepository.save(user);
         return "Registered Successfully";
     }

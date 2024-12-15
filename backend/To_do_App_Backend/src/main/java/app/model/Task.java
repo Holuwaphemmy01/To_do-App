@@ -8,11 +8,11 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import java.util.Date;
 
 @Data
-@Document
+@Document(collection = "task")
 public class Task {
-    private String userId;
     @Id
     private String taskId;
+    private String userId;
     private String title;
     private String description;
     private boolean completed;

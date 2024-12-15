@@ -7,7 +7,10 @@ import java.util.List;
 
 public interface TaskRepository extends MongoRepository<Task, String> {
 
-    Task findTasksByTaskId(String taskId);
 
     List<Task> findAllByUserId(String userId);
+
+    Task findTasksByTaskIdAndUserId(String taskId, String userId);
+
+    List<Task> findAllByUserIdEquals(String username);
 }

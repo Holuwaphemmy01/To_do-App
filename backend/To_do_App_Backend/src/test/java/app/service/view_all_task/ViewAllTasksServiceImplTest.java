@@ -2,6 +2,7 @@ package app.service.view_all_task;
 
 import app.dtos.request.CreateTaskRequest;
 import app.dtos.request.UserRegisterDto;
+import app.dtos.response.TaskResponse;
 import app.model.Task;
 import app.repository.TaskRepository;
 import app.repository.UserRepository;
@@ -60,10 +61,11 @@ class ViewAllTasksServiceImplTest {
         createTaskRequest1.setCompleted(false);
         createTaskRequest1.setTitle("title123");
         createTaskRequest1.setDescription("description");
-        createTaskRequest1.setUser_id("user152515");
+        createTaskRequest1.setUser_id("user151515");
         createTaskService.addTask(createTaskRequest1);
 
         List<Task> result = viewAllTasksService.getAllTasks("user151515");
-        assertEquals(1, result.size());
+        System.out.println(result);
+        assertEquals(2, result.size());
     }
 }

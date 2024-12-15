@@ -14,7 +14,8 @@ public class DeleteTaskServiceImpl implements DeleteTaskService {
 
     @Override
     public void deleteTask(DeleteTaskRequest deleteTaskRequest) {
-        Task result = taskRepository.findTasksByTaskId(deleteTaskRequest.getTaskId());
-        if(result.getUserId().equals(deleteTaskRequest.getUserId())) taskRepository.delete(result);
+        Task result = taskRepository.findTasksByTaskIdAndUserId(deleteTaskRequest.getTaskId(), deleteTaskRequest.getUserId());
+        if(result == null) throw new  IllegalArgumentException("Task not found");
+        taskRepository.delete(result);
     }
 }
