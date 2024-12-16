@@ -20,8 +20,8 @@ public class ViewAllTasksServiceImpl implements ViewAllTasksService {
     public List<TaskResponse> getAllTasks(String username) {
         List<TaskResponse> taskResponses = new ArrayList<>();
         List<Task> result  = taskRepository.findAllByUserId(username);
-        if (result == null||result.isEmpty()){
-            return new ArrayList<>();
+        if (result == null||result.isEmpty()) {
+            throw new IllegalArgumentException("No tasks found for username " + username);
         }
 
         for (Task task : result) {
@@ -37,17 +37,6 @@ public class ViewAllTasksServiceImpl implements ViewAllTasksService {
 
     }
 
-    @Override
-    public TaskResponse getTaskByUserName(String username) {
-        Task result = taskRepository.findTasksByUserId(username);
-        if(result == null) throw new IllegalArgumentException("Task does not exist");
-        TaskResponse taskResponse = new TaskResponse();
-        taskResponse.setTaskId(result.getTaskId());
-        taskResponse.setTitle(result.getTitle());
-        taskResponse.setDescription(result.getDescription());
-        taskResponse.setCompleted(result.isCompleted());
-        return taskResponse;
-    }
 
 
 

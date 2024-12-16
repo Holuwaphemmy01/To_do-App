@@ -7,5 +7,4 @@ import java.util.List;
 
 public interface ViewAllTasksService {
     List<TaskResponse> getAllTasks(String username);
-    TaskResponse getTaskByUserName(String username);
 }

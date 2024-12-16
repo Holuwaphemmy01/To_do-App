@@ -1,18 +1,20 @@
 package app.controllers;
 
 import app.dtos.response.TaskResponse;
-import app.repository.TaskRepository;
 import app.service.view_all_task.ViewAllTasksServiceImpl;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+
+import static org.springframework.http.HttpStatus.OK;
 
     @RestController
     @RequestMapping("/to-do-app")
+    @Slf4j
     public class ViewAllTaskController {
 
         @Autowired
@@ -20,15 +22,18 @@ import java.util.List;
 
 
         @CrossOrigin("*")
-        @GetMapping("/view-all-task")
-        public ResponseEntity<List<TaskResponse>> viewAll(@RequestParam String username) {
+        @GetMapping("/view-all-task/{username}")
+        public ResponseEntity<?> viewAll(@PathVariable String username) {
             try {
                 List<TaskResponse> listOfTask = viewAllTasksService.getAllTasks(username);
-                return ResponseEntity.ok(listOfTask);
+                return ResponseEntity.status(OK).body(listOfTask );
             } catch (IllegalArgumentException e) {
-                return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new ArrayList<>());
+                log.info(Arrays.toString(e.getStackTrace()));
+                return ResponseEntity.status(OK).body(e.getStackTrace());
+
             }
         }
+
 
     }
 
