@@ -2,7 +2,7 @@ package app.service.update_task;
 
 import app.dtos.request.CreateTaskRequest;
 import app.dtos.request.UpdateTaskRequest;
-import app.model.Task;
+import app.dtos.response.TaskResponse;
 import app.repository.TaskRepository;
 import app.service.create_task.CreateTaskService;
 import org.junit.jupiter.api.Test;
@@ -37,7 +37,7 @@ class UpdateTaskServiceImplTest {
         updateTaskRequest.setTaskId(taskId);
         updateTaskRequest.setDescription("description is now updated");
         updateTaskRequest.setUserName("ade92929");
-        Task result = updateTaskService.updateTask(updateTaskRequest);
+        TaskResponse result = updateTaskService.updateTask(updateTaskRequest);
         assertNotEquals(result.getDescription(), createTaskRequest.getDescription());
         assertEquals(result.getDescription(), updateTaskRequest.getDescription());
     }

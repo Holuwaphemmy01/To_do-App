@@ -6,5 +6,6 @@ import app.model.Task;
 import java.util.List;
 
 public interface ViewAllTasksService {
-    List<Task> getAllTasks(String username);
+    List<TaskResponse> getAllTasks(String username);
+    TaskResponse getTaskByUserName(String username);
 }

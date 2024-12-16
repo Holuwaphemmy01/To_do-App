@@ -64,7 +64,7 @@ class ViewAllTasksServiceImplTest {
         createTaskRequest1.setUser_id("user151515");
         createTaskService.addTask(createTaskRequest1);
 
-        List<Task> result = viewAllTasksService.getAllTasks("user151515");
+        List<TaskResponse> result = viewAllTasksService.getAllTasks("user151515");
         System.out.println(result);
         assertEquals(2, result.size());
     }
