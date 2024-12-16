@@ -19,7 +19,7 @@ public class ViewAllTasksServiceImpl implements ViewAllTasksService {
     @Override
     public List<TaskResponse> getAllTasks(String username) {
         List<TaskResponse> taskResponses = new ArrayList<>();
-        List<Task> result  = taskRepository.findAllByUserId(username);
+        List<Task> result  = taskRepository.findAllByUserIdIgnoreCase(username.toLowerCase());
         if (result == null||result.isEmpty()) {
             throw new IllegalArgumentException("No tasks found for username " + username);
         }
