@@ -1,0 +1,41 @@
+.calendar {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .calendar-header h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 0;
+  }
+  
+  .calendar-header p {
+    font-size: 1rem;
+    color: #777;
+  }
+  
+  .calendar-grid {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .grid-item {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eee;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .grid-item.active {
+    background-color: #28a745;
+    color: #fff;
+  }
+  
