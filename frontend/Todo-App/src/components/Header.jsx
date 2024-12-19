@@ -6,12 +6,12 @@ const Header = ({ openLogin, openRegister }) => {
   return (
     <header className="header">
       <div className="logo">
-        <span className="circle">v</span>
-        <span className="site-name">Vista Lab</span>
+        <span className="circle">A</span>
+        <span className="site-name">Akinzo Todo App</span>
       </div>
       <nav>
-        <button onClick={openLogin}>Login</button>
-        <button onClick={openRegister}>Register</button>
+        <button id='LoginAndRegister' onClick={openLogin}>Login</button>
+        <button id='LoginAndRegister' onClick={openRegister}>Register</button>
         <button onClick={openRegister} className="get-started-btn">Get Started</button>
       </nav>
     </header>

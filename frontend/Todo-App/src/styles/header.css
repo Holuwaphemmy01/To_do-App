@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background-color: #FF6B6B; /* Top-notch color */
+  background-color: #FF6B6B; 
   color: #fff;
 }
 
@@ -40,7 +40,6 @@ header button:hover {
 }
 
 
-/* jjgjgj */
 .logo {
   font-weight: bold;
   font-size: 1.5rem;
@@ -67,4 +66,8 @@ button {
 
 button:hover {
   background-color: #e45b4f;
+}
+
+.LoginAndRegister{
+  color: #333333;
 }

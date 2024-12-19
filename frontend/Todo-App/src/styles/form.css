@@ -1,6 +1,7 @@
 form {
     display: flex;
     flex-direction: column;
+    color: #5C4033;
   }
   
   label {

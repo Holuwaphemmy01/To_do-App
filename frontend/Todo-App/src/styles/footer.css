@@ -14,3 +14,14 @@ footer {
   footer a:hover {
     text-decoration: underline;
   }
+
+  .register{
+        color: chocolate;
+        text-align: center;
+        
+  }
+
+  .login{
+    color: chocolate;
+    text-align: center;
+  }

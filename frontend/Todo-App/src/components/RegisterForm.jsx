@@ -7,7 +7,7 @@ const RegisterForm = ({ closeForm, openLogin }) => {
     <div className="form">
       <div className="form-content">
         <span className="close" onClick={closeForm}>&times;</span>
-        <h2>Register</h2>
+        <h2 className='register'>Register</h2>
         <form>
           <label htmlFor="name">Name</label>
           <input type="text" id="name" placeholder="Enter your name" />

@@ -1,15 +1,18 @@
 import React from 'react';
 import '../styles/footer.css';
+import{SocialIcon} from 'react-social-icons';
+
 
 
 const Footer = () => {
   return (
     <footer>
-      <p>&copy; 2024 Vista Lab. All Rights Reserved.</p>
+      <p>&copy; 2024 Akinzo Tech. All Rights Reserved.</p>
       <div className="social-icons">
-        <a href="#"><i>FB</i></a>
-        <a href="#"><i>IN</i></a>
-        <a href="#"><i>TW</i></a>
+      <SocialIcon url="https://facebook.com" style={{ margin: '0 8px' }} />
+        <SocialIcon url="https://instagram.com" style={{ margin: '0 8px' }} />
+        <SocialIcon url="https://twitter.com" style={{ margin: '0 8px' }} />
+        <SocialIcon url="https://linkedin.com" style={{ margin: '0 8px' }} />
       </div>
     </footer>
   );

@@ -7,10 +7,10 @@ import '../styles/form.css';
 
 const LoginForm = ({ closeForm, openRegister }) => {
   return (
-    <div className="modal">
-      <div className="modal-content">
+    <div className="form">
+      <div className="form-content">
         <span className="close" onClick={closeForm}>&times;</span>
-        <h2>Login</h2>
+        <h2 className='login'>Login</h2>
         <form>
           <label htmlFor="email">Email</label>
           <input type="email" id="email" placeholder="Enter your email" />
