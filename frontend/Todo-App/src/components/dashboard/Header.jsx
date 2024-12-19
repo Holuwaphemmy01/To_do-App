@@ -1,23 +1,17 @@
-import React, { useState, useEffect } from 'react';
-import './header.css';
+import React from 'react';
+import './Header.css';
 
-const Header = ({ username }) => {
-  const [currentTime, setCurrentTime] = useState("");
-
-  useEffect(() => {
-    const updateTime = () => {
-      const now = new Date();
-      setCurrentTime(now.toLocaleTimeString());
-    };
-    updateTime();
-    const timer = setInterval(updateTime, 1000);
-    return () => clearInterval(timer);
-  }, []);
-
+const Header = ({ currentTime, onLogout }) => {
   return (
     <header className="header">
-      <h1>Hello, {username}, Start planning today</h1>
-      <span className="current-time">{currentTime}</span>
+      <div className="logo">
+        <span className="circle">v</span>
+        <span className="site-name">Vista Lab</span>
+      </div>
+      <nav className="header-nav">
+        <div className="time-display">{currentTime}</div>
+        <button onClick={onLogout} className="logout-button">Log Out</button>
+      </nav>
     </header>
   );
 };
