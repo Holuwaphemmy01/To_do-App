@@ -1,7 +1,12 @@
 form {
     display: flex;
     flex-direction: column;
-    color: #5C4033;
+    color: #5C4033;  
+  }
+
+  .form-content{
+      padding: 10px;
+      
   }
   
   label {
@@ -33,5 +38,9 @@ form {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+  }
+
+  .close{
+    color: #5C4033;
   }
   
