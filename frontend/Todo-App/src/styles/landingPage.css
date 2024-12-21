@@ -1,6 +1,5 @@
-/* LandingPage.css */
-#root {
-    position: relative;
+.landingPage{
+    position: fixed;
     display: flex;
     flex-direction: column;
     justify-content: space-between; 
@@ -11,36 +10,19 @@
     padding: 0;
     box-sizing: border-box;
   }
-  
-  header, footer {
-    width: 100%; 
-  }
-  
-  .hero {
-    display: flex; 
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-     text-align: center; 
-  }
-  
-  .form {
-    position: fixed;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    top: 0;    
-    height: 90%;
-    border-radius: 15px;
-  }
 
-  .form-content{
-    background-color: wheat;
-    padding: 20px;
-    border-radius: 10px;
-    width: 90%;
-    max-width: 400px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
+   header, footer, .hero{
+    width: 100%;
+} 
+  
+  
+  
+  
+  
+    
+
+  
+  
+
   
  

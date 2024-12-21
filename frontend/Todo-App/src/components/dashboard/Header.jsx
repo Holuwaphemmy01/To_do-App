@@ -1,12 +1,12 @@
 import React from 'react';
-import './Header.css';
+import '../../styles/dashboard/headerDashboard.css';
 
 const Header = ({ currentTime, onLogout }) => {
   return (
-    <header className="header">
+    <header className="headerDashboard">
       <div className="logo">
-        <span className="circle">v</span>
-        <span className="site-name">Vista Lab</span>
+        <span className="circle">A</span>
+        <span className="site-name">Akinzo Todo App</span>
       </div>
       <nav className="header-nav">
         <div className="time-display">{currentTime}</div>

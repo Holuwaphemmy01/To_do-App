@@ -1,4 +1,3 @@
-//  import React from 'react';
  import React, { useState } from 'react'; 
  import Header from './Header';
  import Hero from './Hero';
@@ -29,12 +28,12 @@ const LandingPage =()=> {
     };
   
     return (
-      <div id='root'>
+      <div className='landingPage'>
         <Header openLogin={openLogin} openRegister={openRegister} />
         <Hero openRegister={openRegister} />
         {showLogin && (
-          <div className=''>
-            <div className="">
+          <div className='modal'>
+            <div  className='modal-content'>
               <LoginForm closeForm={closeForm} openRegister={openRegister} />
             </div>
           </div>
@@ -50,5 +49,6 @@ const LandingPage =()=> {
       </div>
     );
   };
+
   
   export default LandingPage;

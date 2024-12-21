@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import Header from '../../styles/dashboard/header.css';
+import Header from './Header.jsx'
 import CurrentTime from './CurrentTime';
+import Footer from './Footer.jsx';
 import '../../styles/dashboard/dashboard.css';
 
 const Dashboard = () => {
@@ -14,8 +15,11 @@ const Dashboard = () => {
     <div className="dashboard">
       <CurrentTime onUpdate={setCurrentTime} />
       <Header currentTime={currentTime} onLogout={handleLogout} />
+      <Footer/>
     </div>
   );
 };
 
-export default Dashboard;
+
+
+ export default Dashboard;
