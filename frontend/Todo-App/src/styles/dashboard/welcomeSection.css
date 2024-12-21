@@ -1,0 +1,14 @@
+.welcome-section{
+    text-align: center;
+    margin: 20px;
+    color: #333;
+}
+
+.welcome-section h1 {
+    font-size: 24px;
+}
+
+.username{
+    font-weight: bold;
+    color: #ff7f50;
+}
