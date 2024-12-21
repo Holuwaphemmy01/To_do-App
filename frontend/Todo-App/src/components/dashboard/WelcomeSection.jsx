@@ -1,11 +1,17 @@
 import React from "react";
+import { useLocation } from "react-router-dom";
+import '../../styles/dashboard/welcomeSection.css'
 
 
-const WelcomeSection =({ username}) =>{
+
+const WelcomeSection =() =>{
+    const location = useLocation();
+    const username = location.state?.username || 'Femi';
+
     return(
         <div className="welcome-section">
             <h1>
-                Hello, <span className="username">{username}</span>, Start Planning Today
+                Hello, <span className="username">{username}</span>, <span className="start-planning">Start planning today</span>
             </h1>
         </div>
     );

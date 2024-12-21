@@ -12,6 +12,8 @@
 const LandingPage =()=> {
     const [showLogin, setShowLogin] = useState(false);
     const [showRegister, setShowRegister] = useState(false);
+    const [username, setUsername] = useState('');
+    const navigate = useNavigate();
   
     const openLogin = () => {
       setShowRegister(false);
