@@ -6,11 +6,12 @@
   background-color: #bcbcbc;
   color: #fff;
   width: 100%;
-  position: fixed;
   bottom: 0;
   left: 0;
-  gap: 20px;                  
-  flex-wrap: wrap;             
+  gap: 15px;
+  margin-left: -20px;             
+  flex-wrap: wrap;         
+  position: relative;    
 }
 
 .footer-logo {
@@ -32,12 +33,15 @@
 }
 
 .footer-logo .site-name {
-  font-size: 18px;             
+  font-size: 18px;      
+  font-weight: bold;
+
 }
 
 .footerDashboard p {
   text-align: center;          
-  flex: 1;                    
+  flex: 1;           
+  margin: 0;         
 }
 
 footer .social-icons {
