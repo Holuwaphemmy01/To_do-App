@@ -40,16 +40,26 @@
     width: 90%;
 }
 
+.calendar-addTask{
+    display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+}
 
 
-/* .footer{
-    margin-top: auto;
-    background-color: #bcbcbc;
-    color: #fff;
-    padding: 10px 0px;
-} */
-     
 
+
+
+
+/* .task-form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  } */
+  
 
 
 

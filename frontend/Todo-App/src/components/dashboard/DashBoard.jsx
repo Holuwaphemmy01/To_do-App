@@ -5,6 +5,7 @@ import CurrentTime from './CurrentTime';
 import Footer from './Footer.jsx';
 import WelcomeSection from './WelcomeSection.jsx';
 import Calendar from './Calendar.jsx';
+import AddTask from './AddTask.jsx'
 import '../../styles/dashboard/dashboard.css';
 
 const Dashboard = () => {
@@ -20,7 +21,11 @@ const Dashboard = () => {
       <CurrentTime onUpdate={setCurrentTime} />
       <Header currentTime={currentTime} onLogout={handleLogout} />
       <WelcomeSection/>
-      <Calendar/>    
+      <div className='calendar-addTask'>
+        <Calendar className='calendar'/>    
+        <AddTask className='addTask'/>
+      </div>
+      
       <Footer/>
     </div>
   );
