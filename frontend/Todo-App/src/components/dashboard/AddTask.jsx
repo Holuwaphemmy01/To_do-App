@@ -39,26 +39,25 @@ const AddTask =()=>{
 
       return (
         <div className="taskList">
-          <h2 className="create-task">Create a task</h2>
-          <div className="task-form">
-           
+          <h2 className="create-task" style={{color:'#ff7f50', marginTop:'-30px'}}>Create a task</h2>
+          <div className="task-form" style={{display:'flex', padding:'15px', gap:'10px', marginBottom:'20px', maxHeight:'400px', height:'100%'}}>
             <input
                 type="text"
                 name="title"
-                placeholder="Task tile"
+                placeholder="Title"
                 value={newTask.title}
                 onChange={handleInputChange}
-                style={{width:'190px', height:'auto'}}
+                style={{width:'100%', maxWidth:'200px', height:'30px'}}
                 required
             />
         
                 <input
                 type="text"
                  name="description"
-                placeholder="Task Description"
+                placeholder="Description"
                  value={newTask.description}
                 onChange={handleInputChange}
-                style={{width:'250px', height:'auto'}}
+                style={{width:'100%', maxWidth:'200px',height:'auto'}}
                 required
             />
 
@@ -66,15 +65,13 @@ const AddTask =()=>{
 
                 <label 
                     htmlFor="date" 
-                    className="date-name"
-                    style={{color: 'black', display:'inline'}}
+                    style={{color: 'black', display:'flex', width:'35px'}}
                     >
                         Due Date
                     </label>
                 <input
                     type="date"
                     name="date"
-                    placeholder="Due Date"
                     value={newTask.date}
                     style={{width: '120px'}}
                     min={getTodayDate()}
@@ -86,9 +83,9 @@ const AddTask =()=>{
         
             <button 
                 onClick={handleAddTask}
-                style={{ width: '120px', height: 'auto' }}
+                style={{ width: '60px', height: 'auto', backgroundColor:'', cursor:'pointer',fontWeight:'bolder'}}
             >
-                Add Task
+                +
             </button>
             </div>
         </div>

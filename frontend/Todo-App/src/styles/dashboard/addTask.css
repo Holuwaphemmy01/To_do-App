@@ -4,13 +4,13 @@
     border-radius: 8px;
   }
   
-  .task-form {
+  /* .task-form {
     display: flex;
     padding: 10px;
     gap: 10px;
     margin-bottom: 20px;
   }
-  
+   */
   .task-form input, .task-form select, .task-form button {
     padding: 8px;
     font-size: 14px;
@@ -19,42 +19,13 @@
     width: 100%;
   }
   
-  .task-form button {
-    background-color: #28a745;
-    color: #fff;
-    cursor: pointer;
-  }
-
-  .create-task{
-    color: #ff7f50;
-  }
-
 
 
   .date-input-container {
     position: relative;
   }
   
-  /* .date-input-container input[type="date"] {
-    position: relative;
-    z-index: 2;
-    padding: 8px;
-  } */
-  
-  /* .date-placeholder {
-    position: absolute;
-    top: 8px;
-    left: 12px;
-    color: #aaa;
-    pointer-events: none;
-    z-index: 1;
-    font-size: 14px;
-  } */
-  
-  /* .date-name{
-    color: black;
-    display: inline;
-  } */
-  
-  
+  .title{
+    width: 100px;
+  }
   
