@@ -39,43 +39,41 @@ const AddTask =()=>{
 
       return (
         <div className="taskList">
-          <h2>Task List</h2>
+          <h2 className="create-task">Create a task</h2>
           <div className="task-form">
+           
             <input
-              type="text"
-              name="title"
-              placeholder="Task tile"
-              value={newTask.title}
-              onChange={handleInputChange}
-              required
+                type="text"
+                name="title"
+                placeholder="Task tile"
+                value={newTask.title}
+                onChange={handleInputChange}
+                required
             />
-    
-            <input
-              type="text"
-              name="description"
-              placeholder="Task Description"
-              value={newTask.description}
-              onChange={handleInputChange}
-              required
+        
+                <input
+                type="text"
+                 name="description"
+                placeholder="Task Description"
+                 value={newTask.description}
+                onChange={handleInputChange}
+                required
             />
-            <input
-              type="date"
-              name="date"
-              value={newTask.date}
-              min={getTodayDate()}
-              onChange={handleInputChange}
-              required
-            />
-            <select
-              name="priority"
-              value={newTask.priority}
-              onChange={handleInputChange}
-            >
-              <option value="">Priority</option>
-              <option value="Low"></option>
-              <option value="Medium"></option>
-              <option value="High"></option>
-            </select>
+            <div className="date-input-container">
+                <input
+                    type="date"
+                    name="date"
+                    placeholder="Due Date"
+                    value={newTask.date}
+                    onFocus={(e) => (e.target.type = 'date')}
+                    onBlur={(e) => !e.target.value && (e.target.type = 'Due date')} 
+                    min={getTodayDate()}
+                    onChange={handleInputChange}
+                    required
+                />
+                
+            </div>
+        
             <button onClick={handleAddTask}>Add Task</button>
             </div>
         </div>

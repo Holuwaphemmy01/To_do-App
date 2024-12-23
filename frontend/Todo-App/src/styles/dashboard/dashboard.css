@@ -10,7 +10,7 @@
 
 }
 
-.dashboard{
+.dashboard-container{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -41,11 +41,17 @@
 }
 
 .calendar-addTask{
-    display: flex;
+  display: flex;
   justify-content: space-between;
   align-items: flex-start;
   gap: 20px;
   flex-wrap: wrap;
+  background-color: rgb(217, 216, 215);
+}
+
+.calendar-addTask > *{
+    flex: 1;
+    min-width: 300px;
 }
 
 
@@ -53,12 +59,12 @@
 
 
 
-/* .task-form {
+.task-form {
     background: #fff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  } */
+  }
   
 
 

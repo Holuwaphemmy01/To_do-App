@@ -17,7 +17,7 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="dashboard">
+    <div className="dashboard-container">
       <CurrentTime onUpdate={setCurrentTime} />
       <Header currentTime={currentTime} onLogout={handleLogout} />
       <WelcomeSection/>
