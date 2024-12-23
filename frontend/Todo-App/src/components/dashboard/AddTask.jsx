@@ -1,4 +1,5 @@
 import { useState} from "react";
+import DisplayTask from "./DisplayTask";
 import '../../styles/dashboard/addTask.css'
 
 
@@ -89,9 +90,12 @@ const AddTask =()=>{
             </button>
             </div>
         </div>
+
       );
       
 
 }
+
+
 
 export default AddTask;

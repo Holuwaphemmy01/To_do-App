@@ -6,6 +6,7 @@ import Footer from './Footer.jsx';
 import WelcomeSection from './WelcomeSection.jsx';
 import Calendar from './Calendar.jsx';
 import AddTask from './AddTask.jsx'
+import DisplayTask from './DisplayTask.jsx';
 import '../../styles/dashboard/dashboard.css';
 
 const Dashboard = () => {
@@ -24,6 +25,7 @@ const Dashboard = () => {
       <div className='calendar-addTask'>
         <Calendar className='calendar'/>    
         <AddTask className='addTask'/>
+        <DisplayTask/>
       </div>
       
       <Footer/>
