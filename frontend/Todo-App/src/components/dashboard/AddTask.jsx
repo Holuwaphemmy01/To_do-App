@@ -10,7 +10,6 @@ const AddTask =()=>{
         title: "",
         description: "",
         date: "",
-        priority: "",
     })
 
 
@@ -90,6 +89,7 @@ const AddTask =()=>{
             </button>
             </div>
         </div>
+
 
       );
       

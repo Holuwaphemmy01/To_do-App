@@ -11,13 +11,6 @@ const tasks = [
       startDate: "07-07-2023",
       dueDate: "07-14-2023",
     },
-    {
-      id: 2,
-      title: "Build a Todo App",
-      description: "Create a full-featured task management application.",
-      startDate: "12-23-2024",
-      dueDate: "12-30-2024",
-    },
   ];
 
 

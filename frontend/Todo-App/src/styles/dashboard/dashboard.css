@@ -19,6 +19,8 @@
     gap: 20px;
     box-sizing: border-box;
     width: 100%;
+    padding: 20px;
+    font-family: Arial, sans-serif;
 }
 
 .calendar{
@@ -54,6 +56,18 @@
     min-width: 300px;
 }
 
+
+.task-display-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.task-display-container > div {
+    width:300px;
+    max-width: 100%;
+  }
 
 
 
