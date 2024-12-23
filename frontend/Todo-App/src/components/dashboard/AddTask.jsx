@@ -48,6 +48,7 @@ const AddTask =()=>{
                 placeholder="Task tile"
                 value={newTask.title}
                 onChange={handleInputChange}
+                style={{width:'190px', height:'auto'}}
                 required
             />
         
@@ -57,24 +58,38 @@ const AddTask =()=>{
                 placeholder="Task Description"
                  value={newTask.description}
                 onChange={handleInputChange}
+                style={{width:'250px', height:'auto'}}
                 required
             />
-            <div className="date-input-container">
+
+
+
+                <label 
+                    htmlFor="date" 
+                    className="date-name"
+                    style={{color: 'black', display:'inline'}}
+                    >
+                        Due Date
+                    </label>
                 <input
                     type="date"
                     name="date"
                     placeholder="Due Date"
                     value={newTask.date}
-                    onFocus={(e) => (e.target.type = 'date')}
-                    onBlur={(e) => !e.target.value && (e.target.type = 'Due date')} 
+                    style={{width: '120px'}}
                     min={getTodayDate()}
                     onChange={handleInputChange}
                     required
                 />
                 
-            </div>
         
-            <button onClick={handleAddTask}>Add Task</button>
+        
+            <button 
+                onClick={handleAddTask}
+                style={{ width: '120px', height: 'auto' }}
+            >
+                Add Task
+            </button>
             </div>
         </div>
       );

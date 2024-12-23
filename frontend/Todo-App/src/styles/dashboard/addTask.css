@@ -35,13 +35,13 @@
     position: relative;
   }
   
-  .date-input-container input[type="date"] {
+  /* .date-input-container input[type="date"] {
     position: relative;
     z-index: 2;
     padding: 8px;
-  }
+  } */
   
-  .date-placeholder {
+  /* .date-placeholder {
     position: absolute;
     top: 8px;
     left: 12px;
@@ -49,9 +49,12 @@
     pointer-events: none;
     z-index: 1;
     font-size: 14px;
-  }
+  } */
   
-
+  /* .date-name{
+    color: black;
+    display: inline;
+  } */
   
   
   
