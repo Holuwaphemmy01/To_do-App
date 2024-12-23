@@ -40,7 +40,7 @@ const AddTask =()=>{
       return (
         <div className="taskList">
           <h2 className="create-task" style={{color:'#ff7f50', marginTop:'-30px'}}>Create a task</h2>
-          <div className="task-form" style={{display:'flex', padding:'15px', gap:'10px', marginBottom:'20px', maxHeight:'400px', height:'100%'}}>
+          <div className="task-form" style={{display:'flex', padding:'15px', gap:'10px', marginBottom:'20px', maxHeight:'400px', height:'100%', width:'100%', maxWidth:'800px', backgroundColor:'wheat'}}>
             <input
                 type="text"
                 name="title"
@@ -57,7 +57,7 @@ const AddTask =()=>{
                 placeholder="Description"
                  value={newTask.description}
                 onChange={handleInputChange}
-                style={{width:'100%', maxWidth:'200px',height:'auto'}}
+                style={{width:'100%', maxWidth:'300px',height:'auto'}}
                 required
             />
 
