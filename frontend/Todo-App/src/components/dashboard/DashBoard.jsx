@@ -13,10 +13,17 @@ import '../../styles/dashboard/dashboard.css';
 
 const Dashboard = () => {
   const [currentTime, setCurrentTime] = useState('');
+  const [tasks, setTasks] = useState([])
   
   const handleLogout = () => {
     console.log('User logged out');
   };
+
+  const addTask =(newTask) =>{
+    setTasks((prevTasks) => [...prevTasks, newTask]);
+  };
+
+
 
   return (
     <div className="dashboard-container">
@@ -24,17 +31,13 @@ const Dashboard = () => {
       <Header currentTime={currentTime} onLogout={handleLogout} />
       <WelcomeSection />
       
-      <div className="calendar-addTask">
+      <div className="calendar-addTask" style={{display:'flex', justifyContent:'space-between', alignItems:'flex-start', gap:'20px'}}>
         <Calendar className="calendar" />   
         <div>
-          <AddTask className="addTask" />
+          <AddTask onAddTask={addTask} />
           <div className="task-display-container">
-            <DisplayTask />
-            <DisplayTask />
-            <DisplayTask />
-            <DisplayTask/>
-            <DisplayTask/>
-            <DisplayTask/>
+            <DisplayTask  tasks={tasks}/>
+            
           </div>
         </div> 
       </div>

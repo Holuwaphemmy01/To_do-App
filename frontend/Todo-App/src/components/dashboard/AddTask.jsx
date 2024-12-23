@@ -4,7 +4,7 @@ import '../../styles/dashboard/addTask.css'
 
 
 
-const AddTask =()=>{
+const AddTask =({onAddTask})=>{
     const [tasks, setTasks] = useState([]);
     const [newTask, setNewTask] = useState({
         title: "",
@@ -29,8 +29,8 @@ const AddTask =()=>{
 
     const handleAddTask = () => {
         if (newTask.title && newTask.description && newTask.date) {
-          setTasks([...tasks, { ...newTask, id: Date.now(), completed: false }]);
-          setNewTask({ title: "", description: "", date: "", priority: "" });
+          onAddTask([...tasks, { ...newTask, id: Date.now(), completed: false }]);
+          setNewTask({ title: "", description: "", date: ""});
         } else {
           alert("Please fill all fields.");
         }
