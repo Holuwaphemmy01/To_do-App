@@ -23,16 +23,6 @@
     font-family: Arial, sans-serif;
 }
 
-.calendar{
-    margin-top: 20px;
-    padding: 20px;
-    border-radius: 8px;
-    width: 100%;
-    max-width: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 .welcome-section{
     text-align: center;
@@ -40,6 +30,7 @@
     background-color: #f8f8f8;
     border-radius: 8px;
     width: 90%;
+    margin: 0 auto;
 }
 
 .calendar-addTask{
@@ -47,8 +38,12 @@
   justify-content: space-between;
   align-items: flex-start;
   gap: 20px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   background-color: rgb(217, 216, 215);
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .calendar-addTask > *{
@@ -59,15 +54,20 @@
 
 .task-display-container{
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    
     gap: 15px;
     margin-top: 20px;
+    width: 100%;
 }
 
 .task-display-container > div {
-    width:300px;
-    max-width: 100%;
+    width:100%;
+    max-width: 350px;
   }
+
+
 
 
 
@@ -75,12 +75,16 @@
 
 .task-form {
     background: #fff;
+    display: flex;
+    gap: 10px;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
   }
   
 
+  
 
 
 

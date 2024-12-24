@@ -4,13 +4,7 @@
     border-radius: 8px;
   }
   
-  /* .task-form {
-    display: flex;
-    padding: 10px;
-    gap: 10px;
-    margin-bottom: 20px;
-  }
-   */
+
   .task-form input, .task-form select, .task-form button {
     padding: 8px;
     font-size: 14px;

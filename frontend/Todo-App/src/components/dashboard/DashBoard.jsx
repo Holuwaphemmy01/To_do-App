@@ -31,15 +31,16 @@ const Dashboard = () => {
       <Header currentTime={currentTime} onLogout={handleLogout} />
       <WelcomeSection />
       
-      <div className="calendar-addTask" style={{display:'flex', justifyContent:'space-between', alignItems:'flex-start', gap:'20px'}}>
+      <div className="calendar-addTask" >
         <Calendar className="calendar" />   
-        <div>
+        <AddTask onAddTask={addTask} />
+
+        {/* <div>
           <AddTask onAddTask={addTask} />
           <div className="task-display-container">
             <DisplayTask  tasks={tasks}/>
-            
           </div>
-        </div> 
+        </div>  */}
       </div>
       <Footer />
     </div>
